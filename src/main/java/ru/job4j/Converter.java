@@ -12,8 +12,20 @@ public class Converter {
     }
 
     public static void main(String[] args) {
-        float rubleE = 258;
-        float rubleD = 4283;
+        float in = 140;
+        float expected = 2;
+        float out = Converter.rubleToEuro(in);
+        boolean passed = expected == out;
+        System.out.println(in + "rubles are" + expected + " Test result :"  + passed);
+
+        in = 180;
+        expected = 3;
+        out = Converter.rubleToDollar(in);
+        passed = expected == out;
+        System.out.println(in + "rubles are" + expected + " Test result :"  + passed);
+
+        float rubleE = 140;
+        float rubleD = 180;
         float euro = rubleToEuro(rubleE);
         float dollar = rubleToDollar(rubleD);
 
